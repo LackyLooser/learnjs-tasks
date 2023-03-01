@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Обязателен ли "else"?
+// Следующая функция возвращает true, если параметр age больше 18.
+
+// В ином случае она запрашивает подтверждение через confirm и возвращает его результат:
+// Будет ли эта функция работать как-то иначе, если убрать else?
+
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    // ...
+    return confirm('Родители разрешили?');
+  }
+}
+// Нет функция будет работать также 
+
+
+// Есть ли хоть одно отличие в поведении этого варианта?
+
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  }
+  // ...
+  return confirm('Родители разрешили?');
+}
+
+// Отличий нет так как если возраст больше 18 выполнение зайдет в блок if 
+// и после return выполнение функции прервется.
+// если же 18 или меньше в обоих вариантах наткнется на return confirm('Родители разрешили?');
+    </script>
+</body>
+</html>

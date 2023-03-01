@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Здесь функция makeUser возвращает объект.
+
+        // Каким будет результат при обращении к свойству объекта ref? Почему?
+        function makeUser() {
+        return {
+            name: "John",
+            ref: this
+        };
+        }
+
+        let user = makeUser();
+
+        alert( user.ref.name )
+        // результат вызова будет ошибка не возможно прочитать свойство name у undefined
+        // this определяется в момент вызова а в донном случае оно равно undefined
+    </script>
+</body>
+</html>
