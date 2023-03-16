@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // Связанная функция как метод
+  // Что выведет функция?
+
+  function f() {
+    alert( this ); // ?
+  }
+
+  let user = {
+    g: f.bind(null)
+  };
+
+  user.g();
+//------ Ответ -----
+// в режиме обратной совместимости object Window
+// в строгом редиме null
+  </script>
+</body>
+</html>

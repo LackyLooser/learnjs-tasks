@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Можем ли мы изменить this дополнительным связыванием?
+// Что выведет этот код?
+    function f() {
+        alert(this.name);
+        }
+
+        f = f.bind( {name: "Вася"} ).bind( {name: "Петя" } );
+
+    f();
+
+//-------Ответ--------
+// нет изменить this мы не можем 
+// Выведет Вася
+    </script>
+</body>
+</html>
